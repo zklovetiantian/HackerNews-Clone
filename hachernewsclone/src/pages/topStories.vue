@@ -18,21 +18,6 @@
         },
         methods : {
             getData(){
-                // this.axios.post('https://hackernews.byteark.cn/graphql',{
-                //     query : `{
-                //         stories(type:${this.variable},first : ${this.$store.state.first},last : ${this.$store.state.last}, skip : ${this.$store.state.skip}){
-                //             by
-                //             time
-                //             url
-                //             score
-                //             title
-                //             descendants
-                //         }
-                //     }`
-                // }).then(res => {
-                //     this.$store.state.data = res.data.data.stories;
-                //     this.$store.commit('updateCount');
-                // })
                 this.$store.state.type = 'top';
                 this.$store.commit('updateData');
             },

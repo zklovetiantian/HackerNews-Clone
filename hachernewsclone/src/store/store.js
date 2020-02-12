@@ -12,12 +12,9 @@ const store = new Vuex.Store({
         skip : 9,
         data : [],
         type : '',
-        currentPage : 1
+        currentPage : 0
     },
     mutations : {
-        // updateCount(){
-        //     this.state.count = this.state.data.length;
-        // },
         updateData(){
             axios.post('https://hackernews.byteark.cn/graphql',{
                 query : `{
@@ -34,6 +31,12 @@ const store = new Vuex.Store({
                 this.state.data = res.data.data.stories;
                 this.state.count = this.state.data.length;
             })
+        },
+        prevPage(){
+            this.state.currentPage --;
+        },
+        nextPage(){
+            this.state.currentPage ++;
         }
     }
 })
