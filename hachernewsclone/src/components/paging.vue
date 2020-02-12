@@ -20,10 +20,7 @@
         methods : {
             getCurrentPage(e){
                 let ev = e || window.event;
-                this.$store.state.currentPage = ev.target.innerHTML - 1
-            },
-            changeStyle(){
-
+                this.$store.commit('getPage',ev.target.innerHTML - 1)
             },
             prevInd(){
                 if(this.$store.state.currentPage > 0){

@@ -32,6 +32,9 @@ const store = new Vuex.Store({
                 this.state.count = this.state.data.length;
             })
         },
+        getPage(state,page){
+            this.state.currentPage = page
+        },
         prevPage(){
             this.state.currentPage --;
         },
