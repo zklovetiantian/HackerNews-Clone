@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./diamonds.js"></script>
+</head>
+<body>
+    请输入：<input type="text" id="getValue"><button onclick="getNum()">提交</button>
+    <div id="show" style="height: 200px;width: 200px;border: 1px solid #fff"></div>
+    <script>
+        function getNum(){
+            var val = document.getElementById('getValue').value;
+            var str = getDiamond(val);
+            // document.getElementById('show').innerText = str;
+        }
+    </script>
+</body>
+</html>
